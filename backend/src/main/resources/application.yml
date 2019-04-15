@@ -1,0 +1,46 @@
+spring:
+  datasource:
+    url: jdbc:hsqldb:mem:mymemdb
+    username: sa
+    password:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+  data:
+    mongo
+  cloud:
+    discovery:
+      enabled: false
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/public-gp2s/dev/
+    chain:
+      enabled: true
+      gzipped: true
+
+swagger:
+  info:
+    title: gP2S REST API
+    description: gP2S description
+    version: 1
+    contactName: gP2S Team
+    url: 
+    e-mail:
+
+server:
+  contextPath: /gp2s
+  port: 21113
+  compression:
+    enabled: true
+    min-response-size: 1024
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+ribbon:
+  eureka:
+   enabled: false
+
+logging:
+  level:
+    root: INFO
+    com.gene.bioinfo.ms.gp2s: INFO
+
+endpoints:
+  shutdown:
+    enabled: true

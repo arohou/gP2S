@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.4.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.gene.bioinfo.ms</groupId>
+    <name>gp2s-app</name>
+    <artifactId>gp2s-app</artifactId>
+    <version>1.1.43</version>
+    <packaging>pom</packaging>
+
+    <scm>
+        <connection>scm:git@https://github.com/arohou/gP2S.git</connection>
+        <developerConnection>scm:git@https://github.com/arohou/gP2S.git</developerConnection>
+        <url>https://github.com/arohou/gP2S</url>
+    </scm>
+
+    <modules>
+        <module>frontend</module>
+        <module>backend</module>
+    </modules>
+
+    <properties>
+        <main.basedir>${project.basedir}</main.basedir>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jfrog.buildinfo</groupId>
+                <artifactId>artifactory-maven-plugin</artifactId>
+                <inherited>false</inherited>
+                <version>2.4.0</version>
+            </plugin>
+            <plugin>
+                <groupId>ru.concerteza.buildnumber</groupId>
+                <artifactId>maven-jgit-buildnumber-plugin</artifactId>
+                <version>1.2.10</version>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,45 @@
+#gp2s:
+#  auth:
+#    ldap:
+#      url: ldap://localhost:10389
+#      managerDn: uid=admin,ou=system
+#      managerPassword: secret
+#      userSearchQuery: uid={0}
+
+server:
+  port: 21113
+spring:
+  profiles: local
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gp2sdb?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: gp2s_user
+    password: password
+    hikari:
+      idle-timeout: 10000
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        default_schema: gp2sdb
+        dialect: org.hibernate.dialect.MySQLDialect
+        hbm2ddl.auto: create
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/gp2sdb
+  resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/public-gp2s/dev/
+  http:
+    multipart:
+      max-file-size: 512MB
+      max-request-size: 512MB
+
+#debug: true
+
+logging:
+  level:
+    org.springframework:
+      web: DEBUG
+      security: DEBUG
+    com.gene.bioinfo.ms.gp2s: DEBUG

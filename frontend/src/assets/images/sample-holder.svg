@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  width="23.526693"
+  height="21.2342"
+  viewBox="0 0 23.526693 21.2342"
+  version="1.1"
+  id="svg18"
+  sodipodi:docname="holder-3.svg"
+  inkscape:version="0.92.1 r15371">
+  <metadata
+    id="metadata22">
+    <rdf:RDF>
+      <cc:Work
+        rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+          rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>holder-3</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+    pagecolor="#ffffff"
+    bordercolor="#666666"
+    borderopacity="1"
+    objecttolerance="10"
+    gridtolerance="10"
+    guidetolerance="10"
+    inkscape:pageopacity="0"
+    inkscape:pageshadow="2"
+    inkscape:window-width="1920"
+    inkscape:window-height="1178"
+    id="namedview20"
+    showgrid="false"
+    fit-margin-top="0"
+    fit-margin-left="0"
+    fit-margin-right="0"
+    fit-margin-bottom="0"
+    inkscape:zoom="10.727273"
+    inkscape:cx="11.667715"
+    inkscape:cy="10.953603"
+    inkscape:window-x="-8"
+    inkscape:window-y="-8"
+    inkscape:window-maximized="1"
+    inkscape:current-layer="svg18" />
+  <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+  <title
+    id="title2">holder-3</title>
+  <desc
+    id="desc4">Created with Sketch.</desc>
+  <defs
+    id="defs6" />
+  <g
+    id="Artboard"
+    transform="translate(-524.83229,-142.7194)"
+    style="fill:none;fill-rule:evenodd;stroke:#74a7eb;stroke-width:1;stroke-opacity:1">
+    <g
+      id="holder-3"
+      transform="rotate(-40,479.62394,-637.52848)"
+      style="stroke:#74a7eb;stroke-width:0.5;stroke-opacity:1">
+      <path
+        d="M 8.9782609,4 V 6.5 H 10.673913 V 9 c 0,0.5522848 0.447715,1 1,1 H 19.5 L 11.804348,0.56521739 H 10.673913 V 4 Z"
+        id="Path-3"
+        style="stroke:#74a7eb;stroke-opacity:1"
+        inkscape:connector-curvature="0" />
+      <path
+        d="m 13,0.56521739 h 5.782609 c 0.552284,0 1,0.44771521 1,1.00000001 V 9 Z"
+        id="Path-4"
+        style="stroke:#74a7eb;stroke-opacity:1"
+        inkscape:connector-curvature="0" />
+      <g
+        id="Group-4"
+        transform="translate(19.800003)"
+        style="stroke:#74a7eb;stroke-opacity:1">
+        <path
+          d="M 0.91304348,1.1304348 V 3 H 2.6086957 V 4.5 H 0.91304348 V 6 H 2.6086957 V 7.5 L 0.91304348,8 V 9.5 H 2.6086957 v 0 c 0,0.552285 0.4477152,1 1,1 H 5 c 0.5522847,0 1,-0.447715 1,-1 V 1 C 6,0.44771525 5.5522847,0 5,0 H 3.6086957 c -0.5522848,0 -1,0.44771525 -1,1 v 0.1304348 z"
+          id="Path-5"
+          style="stroke:#74a7eb;stroke-opacity:1"
+          inkscape:connector-curvature="0" />
+        <polygon
+          id="Path-6"
+          points="4.8695652,9.3804348 4.8695652,1.1304348 3.7391304,1.1304348 3.7391304,9.3804348 "
+          style="stroke:#74a7eb;stroke-opacity:1" />
+      </g>
+      <g
+        id="Group-2"
+        transform="translate(0.800003,3.600006)"
+        style="stroke:#74a7eb;stroke-opacity:1">
+        <polygon
+          id="Path-2"
+          points="7.3499999,2.8913043 7.3499999,0.39130435 0,0.39130435 0,2.8913043 "
+          style="stroke:#74a7eb;stroke-opacity:1" />
+        <circle
+          id="Oval"
+          cx="3.669997"
+          cy="1.6499878"
+          r="1"
+          style="stroke:#74a7eb;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

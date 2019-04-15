@@ -1,0 +1,41 @@
+# Start.
+#  docker swarm init
+#  docker stack deploy -c docker-compose.yml gp2s_dependencies
+#  docker service ls
+#
+# Stop.
+#  docker stack rm gp2s_dependencies
+#  docker swarm leave --force
+#  Please keep in mind that the above command erases your data. Consider making backup before run this command
+#
+version: "3"
+services:
+  mysql:
+    image: mysql/mysql-server:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: gp2s_user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: gp2sdb
+    networks:
+      - gp2snet
+  mongodb:
+    image: mongo:latest
+    environment:
+      MONGO_DATA_DIR: /data/db
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles
+    networks:
+      - gp2snet
+  apacheds:
+    image: openmicroscopy/apacheds:latest
+    ports:
+      - "10389:10389"
+    networks:
+      - gp2snet
+
+networks:
+  gp2snet:

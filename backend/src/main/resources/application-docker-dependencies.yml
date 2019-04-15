@@ -1,0 +1,54 @@
+gp2s:
+  mysql:
+    host: localhost
+    port: 3306
+    username: gp2s_user
+    password: password
+    schema: gp2sdb
+  mongo:
+    host: localhost
+    port: 27017
+    database: gp2sdb
+    username: gp2s_user
+    password: password
+#  auth:
+#    ldap:
+#      url: ldap://localhost:10389
+#      managerDn: uid=admin,ou=system
+#      managerPassword: secret
+#      userSearchQuery: uid={0}
+
+server:
+  port: 8080
+spring:
+  profiles: docker
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${gp2s.mysql.host}:${gp2s.mysql.port}/${gp2s.mysql.schema}?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: ${gp2s.mysql.username}
+    password: ${gp2s.mysql.password}
+    hikari:
+      idle-timeout: 10000
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        default_schema: ${gp2s.mysql.schema}
+        dialect: org.hibernate.dialect.MySQLDialect
+        hbm2ddl.auto: update
+  data:
+    mongodb:
+       uri: mongodb://${gp2s.mongo.host}:${gp2s.mongo.port}/${gp2s.mongo.database}
+  resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/public-gp2s/dev/
+  http:
+    multipart:
+      max-file-size: 512MB
+      max-request-size: 512MB
+
+logging:
+  level:
+    root: INFO
+    com.gene.bioinfo.ms.gp2s: INFO
+

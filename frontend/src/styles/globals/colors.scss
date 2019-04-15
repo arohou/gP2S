@@ -1,0 +1,54 @@
+/*!
+ * Copyright 2018 Genentech Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * Colors
+ */
+
+$text-color: #424242;
+$text-action-color: #5186e2;
+$text-action-color-hoover: rgba(65, 111, 219, 0.7);
+$text-header-color--disabled: #9b9b9b;
+$text-gray-selected: #e0e0e0;
+$background-accent-color: #f0f0f0;
+$background-accent-color-comment-panel: #fafafa;
+$background-accent-color-comment-button-box: #f0f1f1;
+$background-accent-color-comment-box: #f2f2f2;
+$background-accent-color-comment-owner-box: #ecf4ff;
+$list-border-color: #e5f0ff;
+$accent-background-color: #629be8;
+$accent-background-color-hover: rgba(98, 155, 232, 0.5);
+$spinner-color: rgba(98, 155, 232, 0.9);
+$spinner-text-color: #9b9b9b;
+$spinner-background-color: #f3f3f3;
+$form-overlay-color: rgba(255, 255, 255, .75);
+$form-error-color: #ff4949;
+$header-background-color: #424242;
+$danger-background-color: #fc2f39;
+$danger-background-color-hover: rgba(252, 47, 57, 0.7);
+$icon-button-border: #c4c4c4;
+$separating-line-color: #e5e5e5;
+$orange-label-color: #e69f00;
+
+$button-accent-text-color-primary: #4f84e5;
+$button-accent-text-color: #4a4a4a;
+
+$scrollbar-thumb-color: #d4d4d4;
+
+$text-action-hover-color: #20a0ff;
+$text-header-color: #242642;
+$text-label-edit-color: #393939;
+$disabled-color: #d8d8d8;

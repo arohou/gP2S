@@ -1,0 +1,659 @@
+/*!
+ * Copyright 2018 Genentech Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * Application uses element ui framework for Vue.js
+ * @see http://element.eleme.io/
+
+ * Put below any overrides for default UI elements
+ */
+@import 'colors';
+@import 'constants';
+@import 'base';
+
+/**
+ *General column settings
+ */
+
+.el-col--no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/**
+ * General button settings
+ */
+
+.el-button {
+  text-transform: uppercase;
+  font-size: 0.923rem;
+  text-align: center;
+  border-radius: 0.385rem;
+}
+
+.el-button--default {
+  background-color: #ffffff;
+  border: solid 1px $text-header-color--disabled;
+  color: $text-color;
+  object-fit: contain;
+}
+
+.el-button--default:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  color: $text-color;
+  border-color: transparent;
+  background-color: $background-accent-color;
+}
+
+.el-radio-button__orig-radio:checked + .el-radio-button__inner {
+  background-color: $text-action-color;
+  border-color: $text-action-color;
+}
+
+.el-radio-button__orig-radio:checked + .el-radio-button__inner:hover {
+  background-color: $text-action-color-hoover;
+  border-color: $text-action-color-hoover;
+  color: white;
+}
+
+.el-radio-button__orig-radio + .el-radio-button__inner:hover {
+  background-color: $background-accent-color;
+  color: $text-color;
+}
+
+.el-button--primary, .list-view__action-buttons__submit {
+  height: 3.154rem;
+  color: white;
+  background-color: $text-action-color;
+  border: solid 1px $text-action-color;
+  box-shadow: none !important;
+}
+
+.el-button--primary:hover, .list-view__action-buttons__submit:hover {
+  background-color: $text-action-color-hoover;
+  border-color: transparent !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.el-button--danger {
+  background-color: $danger-background-color;
+  color: #ffffff;
+}
+
+.el-button--danger:hover {
+  background-color: $danger-background-color-hover;
+}
+
+.el-input__inner, .el-textarea__inner, .el-checkbox__inner, .el-input-group__append {
+  border: 1px solid $background-accent-color;
+}
+
+.el-input-group__append {
+  border-left: none;
+}
+
+.el-input__inner:hover, .el-textarea__inner:hover, .el-input__inner:focus, .el-textarea__inner:focus,
+.el-checkbox__inner:hover, .el-checkbox__inner:focus, .el-checkbox__input.is-focus .el-checkbox__inner {
+  border: 1px solid $text-action-color;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: $accent-background-color;
+  border-color: $accent-background-color;
+}
+
+.el-checkbox__label {
+  font-size: 1rem;
+}
+
+.el-button.el-button--small, .action-buttons .el-button {
+  border: 1px solid $icon-button-border !important;
+}
+
+.el-button.el-button--small:hover, .action-buttons .el-button:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: white !important;
+}
+
+.el-button.is-disabled, .el-button.is-disabled:hover {
+  border: 1px solid $icon-button-border !important;
+  box-shadow: none;
+  background-color: white;
+}
+
+.el-button.is-disabled span, .el-button.is-disabled:hover span {
+  opacity: 0.3;
+}
+
+/*
+ * Router links
+ */
+
+.router-link-active > button {
+  @extend .el-button--primary;
+}
+
+.router-link-active > li {
+  @extend .el-button--primary;
+}
+
+/*
+ * General form settings
+ */
+
+.el-form-item {
+  margin-bottom: $form-item-margin-bottom;
+
+  .el-form-item__label {
+    font-size: 1.077rem;
+    color: $text-label-edit-color;
+  }
+}
+
+.el-form--label-top .el-form-item__label {
+  padding: 0 0 1.231rem;
+}
+
+.el-form-item.is-required {
+  @extend .el-form-item;
+
+  /* Move the asterisk from the left to the right side */
+  .el-form-item__label:before {
+    content: '';
+  }
+  .el-form-item__label:after {
+    content: '*';
+    color: #fc2b3a;
+    margin-left: 1px;
+  }
+}
+
+.el-message-box__message {
+  p:nth-of-type(n+2) {
+    padding-top: 1rem;
+  }
+}
+
+.el-form-item-as-label {
+  .el-form-item__error {
+    margin-top: -1rem;
+  }
+
+  .el-form-item, .el-form-item.is-required {
+    margin-bottom: -2.2rem;
+  }
+}
+
+.error-message {
+  font-size: 1.077rem;
+  color: #fc2b3a;
+}
+
+.width-10 {
+  width: 10%;
+}
+
+.width-15 {
+  width: 15%;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.width-22-5 {
+  width: 22.5%;
+}
+
+.width-32-5 {
+  width: 32.5%;
+}
+
+.width-33 {
+  width: 33.333%;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.width-70 {
+  width: 60%;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.el-select {
+  width: 100%
+}
+
+.clear-both {
+  clear: both;
+}
+
+.component-tag-protein, .component-tag-ligand, .component-tag-available, .protocol-type-tag-stain, .protocol-type-tag-cryo {
+  padding-left: 0.46rem;
+  padding-right: 0.46rem;
+  float: left;
+  min-width: 3.77rem;
+  line-height: 1.55rem;
+  border-radius: 0.385rem;
+  text-align: center;
+  letter-spacing: -0.008rem;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 0.846rem;
+  color: white;
+  margin-left: 0;
+}
+
+.content-wrapper, .view__metadata, .view-header, .actions-header__content, .base-form {
+  width: $page-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.component-tag-protein {
+  background-color: $orange-label-color;
+}
+
+.component-tag-ligand {
+  background-color: #56b4e9;
+}
+
+.component-tag-available {
+  background-color: #b8e986;
+}
+
+.protocol-type-tag-stain {
+  background-color: #cc79a7;
+}
+
+.protocol-type-tag-cryo {
+  background-color: #70c041;
+}
+
+/*************************************************** VIEW MODE ********************************************************/
+.top-section-wrapper {
+  border-bottom: 1px solid $text-header-color--disabled;
+  padding-top: 6rem;
+  margin-top: -6rem;
+}
+
+.view__metadata, .edit__metadata {
+
+  * {
+    @extend .dont-break-out;
+  }
+
+  * p {
+    margin: 0;
+  }
+
+  &__section-header {
+    font-size: 1.3846rem;
+    font-weight: bold;
+    margin-bottom: 1.231rem;
+  }
+
+  .view__metadata__label, .view__metadata__computed-data__label {
+    font-size: 1.077rem;
+    color: $text-header-color--disabled;
+    margin-bottom: 1rem;
+  }
+
+  .view__metadata__value {
+    font-size: 1.231rem;
+    margin-top: 0.615rem;
+    margin-bottom: 1.538rem;
+  }
+  .view__metadata__label, .view__metadata__value, .view__metadata__computed-data__label {
+    margin-right: 0.923rem;
+  }
+  .view__metadata__computed-data__label {
+    color: $orange-label-color;
+  }
+}
+
+/*************************************************** EDIT VIEW ********************************************************/
+
+.accordion-form {
+  .el-collapse {
+    border: none;
+  }
+
+  .el-collapse-item__header {
+    background-color: $background-accent-color;
+    color: $text-color;
+    font-size: 1.231rem;
+    font-weight: bold;
+    padding: 1.231rem;
+    height: auto;
+    line-height: unset;
+    border-bottom: none;
+
+    &__arrow:before {
+      content: "\E605";
+      color: $text-header-color--disabled;
+    }
+  }
+
+  .el-collapse-item__header:after {
+    content: '';
+    float: right;
+    width: 273px;
+    margin-top: 0.65rem;
+    margin-right: 54px;
+    border-top: solid 1px $text-header-color--disabled;
+  }
+
+  .is-active .el-collapse-item__header {
+    &__arrow:before {
+      content: "\E606";
+    }
+  }
+
+  .el-collapse-item__header__arrow {
+    position: absolute;
+    right: 40px;
+  }
+
+  .el-collapse-item__wrap {
+    border-bottom: none;
+    background: none;
+  }
+
+  .el-collapse-item__content {
+    padding: 2.462rem 0.5rem;
+  }
+}
+
+/*************************************************** LIST VIEW ********************************************************/
+.list-view__header {
+  margin-bottom: 3.692rem;
+}
+
+.list-view__list-row {
+  border-bottom: 1px solid $separating-line-color;
+  margin-bottom: 2.308rem;
+}
+
+.list-view {
+  * {
+    @extend .dont-break-out;
+  }
+
+  .list-view__list-row, .list-view__header {
+    width: $page-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.list-view__date, .list-view__time {
+  font-size: 0.846rem;
+  letter-spacing: -0.008rem;
+  text-align: right;
+  color: $text-color;
+}
+
+.list-view__date {
+  font-weight: bold;
+}
+
+.list-view__id {
+  font-size: 0.846rem;
+  letter-spacing: -0.008rem;
+  margin-top: 0.385rem;
+  text-align: right;
+  color: $text-header-color--disabled;
+}
+
+.list-view__date-and-user-info {
+  height: 4.692rem;
+}
+
+.list-view__component-type {
+  float: right;
+}
+
+.list-view__multiple-labels {
+  overflow: hidden;
+}
+
+.list-view__link-label-wrapper, .left {
+  float: left;
+}
+
+.list-view__link-label, .view__metadata__link {
+  font-size: 1.231rem;
+  letter-spacing: -0.008rem;
+  color: $text-action-color;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+.list-view__link-sub-label {
+  @extend .list-view__link-label;
+  font-size: 1rem;
+}
+
+.list-view__entity-id {
+  margin-top: 3.692rem;
+}
+
+.list-view__entity-projects {
+  margin-top: 2.692rem;
+}
+
+.list-view__entity-protocol-type {
+  margin-top: 1.692rem;
+}
+
+.list-view__link-label:hover, .view__metadata__link:hover {
+  color: $text-action-color-hoover;
+  text-decoration: underline;
+}
+
+.list-view__label {
+  font-size: 1rem;
+  color: $text-header-color--disabled;
+  vertical-align: top;
+}
+
+.list-view__value {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1.462rem;
+  color: $text-color;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.list-view__label, .list-view__value, .list-view .list-view__link-label-wrapper {
+  margin-right: 0.769rem;
+}
+
+.list-view__separator {
+  height: 2.462rem;
+  background-color: $background-accent-color;
+  margin-bottom: 1.462rem;
+
+  div {
+    margin-top: 0.7rem;
+    color: $text-header-color--disabled;
+  }
+}
+
+.scrollable {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.scrollable-container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+//<editor-fold desc="Vue Fine Uploader">
+
+.vue-fine-uploader-cancel-button {
+  background-color: #ffffff;
+  border: solid 1px #9b9b9b;
+  color: #424242;
+  object-fit: contain;
+  text-transform: uppercase;
+  font-size: 0.923rem;
+  text-align: center;
+  border-radius: 0.385rem;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  margin: 0;
+  padding: 10px 15px;
+  -webkit-appearance: none;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.vue-fine-uploader-gallery-dropzone {
+  border-color: $text-action-color !important;
+}
+
+.vue-fine-uploader-gallery-file-input-container {
+  background: $text-action-color !important;
+  border-color: $text-action-color !important;
+}
+
+.vue-fine-uploader-gallery-file-input-container:hover {
+  background-color: $text-action-color-hoover !important;
+  border-color: $text-action-color-hoover !important;
+}
+
+.view__metadata__additional-content__print {
+  display: none;
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Printer style sheet">
+@media print {
+  .app__nav-menu-wrapper, .nav-menu, .app__header, .app__header-background, .action-buttons, .list-view__header, .comment__box {
+    display: none;
+    width: 0px;
+  }
+  .app__content {
+    z-index: 500 !important;
+    position: absolute;
+    margin-right: 0.5rem;
+    width: 100vh;
+
+    .list-view__separator {
+      height: 2.462rem;
+      box-shadow: inset 0 0 0 1000px #f0f0f0;
+      margin-bottom: 1.462rem;
+    }
+    .view__metadata {
+      .view__metadata__row {
+        display: flex;
+      }
+    }
+    .view__metadata__additional-content__col {
+      width: 100%;
+    }
+    .list-view-item {
+      display: flex;
+
+      .list-view__list-row {
+        width: 100%;
+        display: flex;
+      }
+      .list-view-item__row {
+        display: flex;
+      }
+    }
+    .list-view__list-row__default-pane {
+      width: 62.5%;
+    }
+    .list-view__list-row__left-pane {
+      width: 25%;
+    }
+    .list-view__list-row__right-pane {
+      width: 12.5%;
+    }
+    .view__comment-section {
+      display: block !important;
+      margin-right: 0.6rem;
+    }
+    .view__metadata__additional-content__print {
+      display: block !important;
+      width: 100%;
+    }
+    .view-header__content__title__link {
+      display: block !important;
+    }
+    .view-header__content__title {
+      display: none;
+    }
+    .dashboard {
+      display: none;
+    }
+    .comment-indicator, .view-header__comments, .view-header__actions {
+      margin-bottom: 0;
+    }
+    .view-header__comments {
+      margin-right: 0.1rem;
+    }
+    .comments-header {
+      margin-left: 1.65rem;
+      font-weight: bold;
+    }
+    .comment-list {
+      width: 90%;
+      margin-left: 10%;
+    }
+    .view-header__actions {
+      margin-top: -2rem;
+    }
+    .content-wrapper {
+      width: 100%;
+    }
+  }
+}
+
+//</editor-fold>

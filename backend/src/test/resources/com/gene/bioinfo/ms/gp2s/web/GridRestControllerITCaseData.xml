@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <project ID="1" VERSION="1" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.892"
+             MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.087" SLUG="project-slug-1"
+             LABEL="project 1" PROJECT_MANAGEMENT_SYSTEM_SLUG="project-management-system-slug-1"/>
+    <project ID="2" VERSION="1" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.965"
+             MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.13" SLUG="project-slug-2"
+             LABEL="project 2" PROJECT_MANAGEMENT_SYSTEM_SLUG="project-management-system-slug-2"/>
+    <default_value/>
+    <protein ID="1" VERSION="0" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.987"
+             MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:57.987" SLUG="protein-slug-1" LABEL="protein 1"
+             IS_DILUTED_OR_CONCENTRATED="false" CONCENTRATION_TYPE="Concentration"/>
+    <ligand ID="1" VERSION="0" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:58.011"
+            MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.011" SLUG="compound-slug-2"
+            LABEL="compound 2"/>
+    <project_ligand PROJECT_ID="1" LIGAND_ID="1"/>
+    <project_protein PROJECT_ID="2" PROTEIN_ID="1"/>
+    <sample ID="1" VERSION="0" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:58.158"
+            MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.158" SLUG="sample-1" LABEL="sample 1"
+            AVAILABLE_FOR_GRID_MAKING="true"/>
+    <ligand_component ID="1" VERSION="0" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:58.187"
+                      MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.187"
+                      FINAL_CONCENTRATION="2.0999999046325684" LIGAND_ID="1" SAMPLE_ID="1"/>
+    <protein_component ID="1" VERSION="0" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:58.216"
+                       MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.216"
+                       FINAL_CONCENTRATION="1.100000023841858" PROTEIN_ID="1" SAMPLE_ID="1"/>
+    <grid_type ID="1" VERSION="0" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:58.294"
+               MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.294" SLUG="grid-type-1"
+               LABEL="Grid type 1"/>
+    <negative_stain_protocol/>
+    <surface_treatment_protocol ID="1" VERSION="0" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:58.319"
+                                MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.319" SLUG="st-protocol-1"
+                                LABEL="ST Protocol 1"/>
+    <vitrification_protocol ID="1" VERSION="0" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:58.358"
+                            MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.358" SLUG="v-protocol-1"
+                            LABEL="V Protocol 1"/>
+    <cryo_storage_device ID="1" VERSION="1" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.892"
+                         MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.087"
+                         SLUG="cryo_storage_device-slug-1" LABEL="cryo_storage_device 1" HAS_CYLINDERS="false"
+                         HAS_TUBES="false" HAS_BOXES="false"/>
+    <grid ID="1" VERSION="0" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:58.383"
+          MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.383" SLUG="entity-slug-1" LABEL="entity 1"
+          PROTOCOL_TYPE="0" VOLUME="3.5" SAMPLE_ID="1" GRID_TYPE_ID="1" SURFACE_TREATMENT_PROTOCOL_ID="1"
+          VITRIFICATION_PROTOCOL_ID="1" cryo_storage_device_id="1" IS_DILUTED_OR_CONCENTRATED="false"
+          CONCENTRATION_TYPE="Concentration"/>
+    <grid ID="2" VERSION="0" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:58.405"
+          MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.405" SLUG="entity-slug-2" LABEL="entity 2"
+          PROTOCOL_TYPE="0" VOLUME="3.5" SAMPLE_ID="1" GRID_TYPE_ID="1" SURFACE_TREATMENT_PROTOCOL_ID="1"
+          VITRIFICATION_PROTOCOL_ID="1" cryo_storage_device_id="1" IS_DILUTED_OR_CONCENTRATED="false"
+          CONCENTRATION_TYPE="Concentration"/>
+</dataset>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <project/>
+    <ligand/>
+    <protein/>
+    <project_protein/>
+    <project_ligand/>
+    <ligand_component/>
+    <protein_component/>
+    <microscopy_session/>
+    <project ID="1" VERSION="1" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.892"
+             MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.087" SLUG="project-slug-1"
+             LABEL="project 1" PROJECT_MANAGEMENT_SYSTEM_SLUG="project-management-system-slug-1"/>
+    <project ID="2" VERSION="1" CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.892"
+             MODIFIED_BY="Walt Kowalski" MODIFIED_DATE="2017-10-27 18:45:58.087" SLUG="project-slug-2"
+             LABEL="project 2" PROJECT_MANAGEMENT_SYSTEM_SLUG="project-management-system-slug-2"/>
+    <default_value ID="1" ENTITY_TYPE="GRID" PROJECT_ID="1" FIELD_NAME="key-1" VALUE="value 1" VERSION="1"
+                   CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.892" MODIFIED_BY="Walt Kowalski"
+                   MODIFIED_DATE="2017-10-27 18:45:58.087"/>
+    <default_value ID="2" ENTITY_TYPE="GRID" PROJECT_ID="1" FIELD_NAME="key-2" VALUE="value 2" VERSION="1"
+                   CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.892" MODIFIED_BY="Walt Kowalski"
+                   MODIFIED_DATE="2017-10-27 18:45:58.087"/>
+    <default_value ID="3" ENTITY_TYPE="GRID" PROJECT_ID="1" FIELD_NAME="key-3" VALUE="value 3" VERSION="1"
+                   CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.892" MODIFIED_BY="Walt Kowalski"
+                   MODIFIED_DATE="2017-10-27 18:45:58.087"/>
+    <default_value ID="4" ENTITY_TYPE="TEST" PROJECT_ID="1" FIELD_NAME="key-1" VALUE="value 4" VERSION="1"
+                   CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.892" MODIFIED_BY="Walt Kowalski"
+                   MODIFIED_DATE="2017-10-27 18:45:58.087"/>
+    <default_value ID="5" ENTITY_TYPE="TEST" PROJECT_ID="1" FIELD_NAME="key-2" VALUE="value 5" VERSION="1"
+                   CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.892" MODIFIED_BY="Walt Kowalski"
+                   MODIFIED_DATE="2017-10-27 18:45:58.087"/>
+    <default_value ID="6" ENTITY_TYPE="GRID" PROJECT_ID="2" FIELD_NAME="key-9" VALUE="value 9" VERSION="1"
+                   CREATED_BY="Walt Kowalski" CREATED_DATE="2017-10-27 18:45:57.892" MODIFIED_BY="Walt Kowalski"
+                   MODIFIED_DATE="2017-10-27 18:45:58.087"/>
+</dataset>

@@ -1,0 +1,79 @@
+# Start.
+#  docker swarm init
+#  docker stack deploy -c docker-compose.yml gp2s_stack
+#  docker service ls
+#
+# Stop and remove services along with database volumes.
+#  docker stack rm gp2s_stack
+#  docker swarm leave --force
+#
+version: "3"
+services:
+  mysql:
+    container_name: gp2s_mysql
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: gp2s_user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: gp2sdb
+    networks:
+      - gp2snet
+    #Uncomment below two lines to have mysql data persisent
+    #volumes:
+    #  - mysql_volume:/var/lib/mysql
+  mongodb:
+    container_name: gp2s_mongodb
+    image: mongo:4.0.6
+    environment:
+      MONGO_DATA_DIR: /data/db
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles # --quiet
+    networks:
+      - gp2snet
+    #Uncomment below two lines to have mysql data persisent
+    #volumes:
+    #  -  mongo_volume:/data/db
+  apacheds:
+    container_name: gp2s_apacheds
+    image: openmicroscopy/apacheds:0.7.0
+    ports:
+      - 10389:10389
+    networks:
+      - gp2snet
+  gp2s-service:
+    container_name: gp2s-service
+    image: arohou/gp2s
+    environment:
+      JAVA_OPTS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1 -XshowSettings:vm
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_USERNAME: gp2s_user
+      MYSQL_PASSWORD: password
+      MYSQL_SCHEMA: gp2sdb
+      MONGO_HOST: mongodb
+      MONGO_PORT: 27017
+      MONGO_DATABASE: gp2sdb
+      LDAP_URL: ldap://apacheds:10389
+      LDAP_MANAGER_DN: uid=admin,ou=system
+      LDAP_MANAGER_PASSWORD: secret
+      LDAP_USER_SEARCH_QUERY: uid={0}
+    ports:
+      - 8080:8080
+    networks:
+      - gp2snet
+    depends_on:
+      - mysql
+      - mongodb
+      - apacheds
+
+networks:
+  gp2snet:
+
+#Uncomment below lines to have mysql and mongodb data persisent
+#volumes:
+  #mongo_volume:
+  #mysql_volume:

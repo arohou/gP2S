@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>gp2s-app</artifactId>
+    <groupId>com.gene.bioinfo.ms</groupId>
+    <version>1.1.43</version>
+  </parent>
+
+  <name>gp2s-frontend</name>
+  <description>A SPA frontend application for the gp2s-service</description>
+  <artifactId>gp2s-frontend</artifactId>
+  <version>1.1.43</version>
+
+  <properties>
+    <node.version>v8.11.4</node.version>
+    <npm.version>6.4.0</npm.version>
+    <skipTests>false</skipTests>
+    <frontendEnv>dev</frontendEnv>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.4</version>
+        <configuration>
+          <nodeVersion>${node.version}</nodeVersion>
+          <npmVersion>${npm.version}</npmVersion>
+          <nodeDownloadRoot>https://nodejs.org/dist/</nodeDownloadRoot>
+          <npmDownloadRoot>http://registry.npmjs.org/npm/-/</npmDownloadRoot>
+          <installDirectory>target</installDirectory>
+        </configuration>
+        <executions>
+          <!-- Install our node and npm version to run npm/node scripts-->
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+            <phase>generate-resources</phase>
+          </execution>
+
+
+          <!-- Install all project dependencies -->
+          <execution>
+            <id>npm install</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <arguments>install</arguments>
+              <installDirectory>target</installDirectory>
+            </configuration>
+          </execution>
+
+          <!-- Increase memory for tests to run -->
+          <execution>
+            <id>fix memory limit</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>process-resources</phase>
+            <configuration>
+              <skip>${skipTests}</skip>
+              <arguments>run fix-memory-limit</arguments>
+            </configuration>
+          </execution>
+		  
+          <execution>
+            <id>npm test</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>process-resources</phase>
+            <configuration>
+              <skip>${skipTests}</skip>
+              <arguments>test</arguments>
+            </configuration>
+          </execution>
+
+          <!-- Build and minify prod, test and dev static files -->
+          <execution>
+            <id>npm run build</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>compile</phase>
+            <configuration>
+              <arguments>run build:${frontendEnv}</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

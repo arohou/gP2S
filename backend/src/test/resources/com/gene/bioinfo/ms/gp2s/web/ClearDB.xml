@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <blotting_paper/>
+    <cryo_storage_device/>
+    <microscope/>
+    <microscope_voltage/>
+    <electron_detector/>
+    <magnification/>
+    <surface_treatment_machine/>
+    <vitrification_machine/>
+    <negative_stain_protocol/>
+    <surface_treatment_protocol/>
+    <vitrification_protocol/>
+    <grid_type/>
+    <cryo_storage_device/>
+    <project/>
+    <ligand/>
+    <protein/>
+    <project_ligand/>
+    <project_protein/>
+    <sample/>
+    <ligand_component/>
+    <protein_component/>
+    <grid/>
+    <default_value/>
+    <microscopy_session/>
+</dataset>
