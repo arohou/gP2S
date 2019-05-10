@@ -8,7 +8,7 @@
 
 You have created 2 proteins, but no sample yet.
 
-A sample is a mixture of proteins and ligands (can be 0 proteins or 0 ligands). Once you have created a sample, it will show up in the drop down during grid creation.
+A sample is a mixture of proteins and ligands (can be 0 proteins or 0 ligands, but must be at least one component). Once you have created a sample, it will show up in the drop down during grid creation.
 
 If you want to save time, you can create a sample directly because that form let's you create the proteins on the fly.
 
@@ -24,3 +24,8 @@ gP2S does not manage user accounts. Instead it relies on an LDAP server to authe
 2. You can get gP2S to query an existing LDAP server, for example the one from your institution, so that users would just use their "normal" user name and password to login to gP2S and you wouldn't be responsible for maintaining that part.
 
 If you choose option (1), see the section "How to add a user to dockerized LDAP". If you choose option (2), see the section "How to connect gP2S application to your own databases or LDAP server" and the following section "Configuration", in particular the LDAP_* variables.
+
+
+#### Does this give separate project spaces for different 'labs' (as in, different labs on campus not wanting to share information)? Or does everyone share the same project space?
+
+Within an instance of gP2S, everything is open to all authenticated users, but it should be easy to run separate instances each with their own authentication. But the real solution might be to improve the culture on your campus!
