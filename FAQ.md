@@ -14,6 +14,10 @@ If you want to save time, you can create a sample directly because that form let
 
 The reason it is organized this way is that you can have one protein prep re-used between different samples (for example, each with their own ligand).
 
+#### Are all web browsers supported?
+
+gP2S has been tested with Chrome and Safari. We have had reports of problems with some versions of Firefox (66.0.3 (64-bit)). 
+
 ## Administration
 
 #### How do I add new users?
