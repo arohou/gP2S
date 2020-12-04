@@ -40,4 +40,7 @@ To enable the creation of grids, you will also need to tell gP2S about Protocols
 For each type of entity (e.g. “Vitrification Machine”, “Grid Type”), navigate to the relevant page by using the left-hand-side menu, click the “Create New” button in the top left of the page, and fill in the form that appears. Fields with red asterisks are required; others are optional. Then click the “Save” button at the top of the page when you are done.
 
 To enable microscopy sessions, you will need to tell gP2S about your microscope(s), which in turn entails creating electron detector(s) and sample holder(s). When creating the microscope object, you have the opportunity to enter the list of magnifications for this microscope. You only need to enter those magnifications you want users to be able to use during data collection. 
+
+# Issues #
+Any issues can be reported using the GitHub standard issue management mechanism.
   
