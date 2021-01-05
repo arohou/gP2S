@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "automapper-ts": "^1.8.3",
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "babel-plugin-transform-builtin-extend": "^1.1.2",
     "big.js": "^5.1.2",
     "element-ui": "^1.4.10",
